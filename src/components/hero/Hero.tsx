@@ -33,23 +33,6 @@ export function Hero() {
             Recibir asesoría
           </LinkButton>
         </div>
-
-        <div className="hero__footer">
-          <strong>15 años</strong>
-
-          <span>
-            de experiencia
-            <br />
-            en cada acabado
-          </span>
-
-          <div className="hero__divider" />
-
-          <span>
-            Diseño, calidad
-            <br />y confianza.
-          </span>
-        </div>
       </div>
 
       <div

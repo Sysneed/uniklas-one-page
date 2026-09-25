@@ -1,4 +1,5 @@
 import "./App.css";
+import { About } from "./components/about/About";
 
 import { Hero } from "./components/hero/Hero";
 import { Navbar } from "./components/navbar/Navbar";
@@ -13,6 +14,7 @@ function App() {
       <main>
         <Hero />
         <Product />
+        <About />
       </main>
       <footer></footer>
     </>
