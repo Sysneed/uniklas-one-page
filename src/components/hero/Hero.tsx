@@ -24,12 +24,12 @@ export function Hero() {
         </p>
 
         <div className="hero__actions">
-          <LinkButton href="#productos" variant="primary">
+          <LinkButton href="#products" variant="primary">
             Explorar productos
             <Eye size={22}></Eye>
           </LinkButton>
 
-          <LinkButton href="#contacto" variant="text">
+          <LinkButton href="#contact" variant="text">
             Recibir asesoría
           </LinkButton>
         </div>
@@ -52,7 +52,7 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="hero__vertical-label">UNIKLAS · DISEÑA TU ESPACIO</div>
+    
     </section>
   );
 }

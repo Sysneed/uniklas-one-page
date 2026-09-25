@@ -13,7 +13,7 @@ export function Navbar() {
   };
 
   return (
-    <nav className="navbar" aria-label="Navegación principal">
+    <nav className="navbar" id="home" aria-label="Navegación principal">
       <div className="navbar__brand">
         <LinkButton href="#home" onClick={closeMenu}>
           <img className="navbar__logo" alt="Uniklas" />
