@@ -1,10 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 
 :root {
+  width: 100%;
+  max-width: 1800px;
+  min-height: 100vh;
+
+  margin: 0 auto;
   font-family: "Manrope", sans-serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
-
+  
+  --color-emphasis: #7a8c5c;
   --color-ink: #273029;
   --color-accent: #c4e38c;
 
@@ -21,6 +27,8 @@
   --color-link-border: #9dada0;
 
   --color-white: #ffffff;
+
+  --color-image-overlay: rgba(20, 30, 20, 0.48);
 }
 
 *,
