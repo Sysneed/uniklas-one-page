@@ -31,12 +31,6 @@ export function Navbar() {
         </li>
 
         <li className="navbar__item">
-          <LinkButton href="#spaces" onClick={closeMenu}>
-            Espacios
-          </LinkButton>
-        </li>
-
-        <li className="navbar__item">
           <LinkButton href="#about" onClick={closeMenu}>
             Nosotros
           </LinkButton>

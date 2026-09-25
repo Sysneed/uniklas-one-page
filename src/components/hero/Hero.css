@@ -214,6 +214,13 @@
   }
 }
 
+@media (min-height: 950px) and (min-width: 761px) {
+  .hero {
+    min-height: 850px;
+    height: 850px;
+  }
+}
+
 @media (max-width: 760px) {
   .hero {
     grid-template-columns: 1fr;

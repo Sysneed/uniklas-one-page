@@ -1,0 +1,267 @@
+.products {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  min-height: 100dvh;
+
+  padding: clamp(2rem, 3vw, 3rem) clamp(1.5rem, 6vw, 7rem)
+    clamp(4rem, 6vw, 5.625rem);
+
+  background-color: var(--color-background);
+}
+
+.products__header {
+  margin-bottom: 2rem;
+}
+
+.products__eyebrow,
+.products__category-eyebrow {
+  color: var(--color-ink);
+
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.125rem;
+}
+
+.products__title {
+  margin: 1.25rem 0 0;
+
+  color: var(--color-ink);
+
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(2rem, 3.2vw, 3rem);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.10625rem;
+}
+
+.products__filters {
+  display: flex;
+  gap: clamp(1.5rem, 3vw, 1.875rem);
+
+  margin-bottom: 2rem;
+
+  border-bottom: 1px solid var(--color-border);
+}
+
+.products__filter {
+  position: relative;
+
+  flex-shrink: 0;
+
+  padding: 1rem 0;
+
+  color: var(--color-text-muted);
+  background-color: transparent;
+  border: 0;
+
+  font: inherit;
+
+  cursor: pointer;
+}
+
+.products__filter--active {
+  color: var(--color-ink);
+}
+
+.products__filter--active::after {
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  left: 0;
+
+  height: 3px;
+
+  content: "";
+
+  background-color: var(--color-ink);
+}
+
+.products__showcase {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+
+  flex: 1;
+  min-height: 500px;
+
+  background-color: var(--color-background);
+}
+
+.products__image {
+  position: relative;
+
+  min-width: 0;
+  min-height: 500px;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  overflow: hidden;
+}
+
+.products__image::after {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+
+  content: "";
+
+  background: linear-gradient(
+    to top,
+    rgba(20, 30, 20, 0.82) 0%,
+    rgba(20, 30, 20, 0.58) 22%,
+    rgba(20, 30, 20, 0.25) 45%,
+    rgba(20, 30, 20, 0.08) 65%,
+    transparent 80%
+  );
+
+  pointer-events: none;
+}
+
+.products__image-content {
+  position: absolute;
+  z-index: 1;
+  right: 2.1875rem;
+  bottom: 2.375rem;
+  left: 2.1875rem;
+
+  color: var(--color-white);
+}
+
+.products__image-content span {
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: 0.125rem;
+}
+
+.products__image-content p {
+  max-width: 400px;
+  margin: 0.5rem 0 0;
+
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  font-weight: 400;
+  line-height: 1.35;
+}
+
+.products__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  padding: 3rem;
+
+  background-color: var(--color-background);
+}
+
+.products__category-title {
+  max-width: 500px;
+  margin: 1.5rem 0;
+
+  color: var(--color-ink);
+
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(2rem, 3.5vw, 3.5rem);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.125rem;
+}
+
+.products__description {
+  max-width: 440px;
+  margin: 0;
+
+  color: var(--color-text-muted);
+
+  font-size: 0.9375rem;
+  line-height: 1.7;
+}
+
+.products__action {
+  margin-top: 2rem;
+}
+
+@media (max-width: 900px) {
+  .products {
+    min-height: auto;
+  }
+
+  .products__showcase {
+    grid-template-columns: 1fr;
+
+    flex: initial;
+    min-height: 0;
+  }
+
+  .products__image {
+    height: 430px;
+    min-height: 430px;
+  }
+
+  .products__content {
+    padding: 3rem;
+  }
+}
+
+@media (max-width: 760px) {
+  .products {
+    padding: 3rem clamp(1.25rem, 6vw, 2.5rem);
+  }
+
+  .products__filters {
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scrollbar-width: none;
+  }
+
+  .products__filters::-webkit-scrollbar {
+    display: none;
+  }
+
+  .products__image {
+    height: 360px;
+    min-height: 360px;
+  }
+
+  .products__image-content {
+    right: 1.5rem;
+    bottom: 1.5rem;
+    left: 1.5rem;
+  }
+
+  .products__content {
+    padding: 2.5rem 1.75rem;
+  }
+
+  .products__category-title {
+    margin: 1.25rem 0;
+
+    font-size: 2.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .products {
+    padding: 2.5rem 1.25rem;
+  }
+
+  .products__title {
+    font-size: 2rem;
+  }
+
+  .products__image {
+    height: 300px;
+    min-height: 300px;
+  }
+
+  .products__content {
+    padding: 2rem 1.5rem;
+  }
+
+  .products__category-title {
+    font-size: 2rem;
+  }
+}
