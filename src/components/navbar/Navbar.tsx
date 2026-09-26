@@ -1,7 +1,7 @@
 import "./Navbar.css";
 
-import { useState } from "react";
 import { Menu, Package, X } from "lucide-react";
+import { useState } from "react";
 import { Button } from "../button/Button";
 import { LinkButton } from "../link-button/LinkButton";
 

@@ -1,7 +1,8 @@
 import "./Contact.css";
 
+import { FaFacebookF, FaInstagram, FaTiktok, FaWhatsapp } from "react-icons/fa";
+
 import { LinkButton } from "../link-button/LinkButton";
-import { FaWhatsapp } from "react-icons/fa";
 
 export function Contact() {
   return (
@@ -48,18 +49,16 @@ export function Contact() {
             Interior 218 · Piso 2
           </address>
 
-          <div className="contact__map">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4891.327545864187!2d-76.9963274!3d-12.1209222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105b9005769c657%3A0x23f4f42364eae2a1!2sUNIKLAS!5e0!3m2!1ses!2spe!4v1747102141898!5m2!1ses!2spe"
-              title="Ubicación de Uniklas"
-              loading="lazy"
-              allowFullScreen
-              referrerPolicy="no-referrer-when-downgrade"
-            />
-          </div>
+          <a
+            className="contact__directions"
+            href="https://www.google.com/maps/search/?api=1&query=UNIKLAS%20Calle%20Mar%C3%ADa%20Reiche%20189%20Santiago%20de%20Surco"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Cómo llegar
+            <span aria-hidden="true">↗</span>
+          </a>
         </div>
-
-        <div className="contact__divider" />
 
         <div className="contact__channels">
           <div className="contact__channel">
@@ -77,6 +76,48 @@ export function Contact() {
               ventas@uniklas.pe
               <span aria-hidden="true">↗</span>
             </a>
+          </div>
+
+          <div className="contact__channel">
+            <span className="contact__label">HORARIO</span>
+
+            <div className="contact__hours">
+              <span>Lun – Vie</span>
+              <strong>9:00 am – 5:30 pm</strong>
+
+              <span>Sábado</span>
+              <strong>9:00 am – 1:00 pm</strong>
+            </div>
+          </div>
+
+          <div className="contact__channel">
+            <span className="contact__label">REDES SOCIALES</span>
+
+            <div className="contact__socials">
+              <a
+                href="#"
+                className="contact__social"
+                aria-label="Facebook de Uniklas"
+              >
+                <FaFacebookF />
+              </a>
+
+              <a
+                href="#"
+                className="contact__social"
+                aria-label="Instagram de Uniklas"
+              >
+                <FaInstagram />
+              </a>
+
+              <a
+                href="#"
+                className="contact__social"
+                aria-label="TikTok de Uniklas"
+              >
+                <FaTiktok />
+              </a>
+            </div>
           </div>
         </div>
       </div>
