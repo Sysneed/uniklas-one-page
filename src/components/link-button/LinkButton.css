@@ -1,0 +1,62 @@
+.link-button {
+  display: inline-flex;
+  align-items: center;
+
+  color: inherit;
+  font-family: inherit;
+  text-decoration: none;
+
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.link-button--nav {
+  color: var(--color-ink);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.link-button--nav:hover {
+  color: var(--color-nav-hover);
+}
+
+.link-button--primary,
+.link-button--light {
+  justify-content: center;
+  gap: clamp(0.5rem, 1vw, 0.75rem);
+  padding: clamp(0.875rem, 2vw, 1.0625rem) clamp(1.125rem, 3vw, 1.5625rem);
+
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.link-button--primary {
+  background-color: var(--color-ink);
+  color: var(--color-white);
+}
+
+.link-button--primary:hover {
+  background-color: var(--color-primary-hover);
+  transform: translateY(-2px);
+}
+
+.link-button--light {
+  background-color: var(--color-accent);
+  color: var(--color-ink);
+}
+
+.link-button--light:hover {
+  transform: translateY(-2px);
+}
+
+.link-button--text {
+  padding: 0.375rem 0;
+
+  color: var(--color-ink);
+  border-bottom: 1px solid var(--color-link-border);
+
+  font-size: 0.875rem;
+  font-weight: 500;
+}
